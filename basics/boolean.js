@@ -24,4 +24,6 @@ if (age <= 7) {
     console.log('Child Pricing!')
 } else if (age >= 65) {
     console.log('Senior discoung')
-} else console.log('You\'re SOL')
+} else {
+    console.log('You\'re SOL')
+ }
