@@ -2,8 +2,8 @@
 // 15/20 - you got a C (75%)!
 // A 90-100, B 80-89, C 70-79, F 0-59
 
-let totalPossibleScore = function(score, totalScore) {
-    let percent = (score / totalScore) * 100
+const totalPossibleScore = function(score, totalScore) {
+    const percent = (score / totalScore) * 100
     let letterGrade = ''
 
     if (percent >= 90) {
@@ -20,5 +20,5 @@ let totalPossibleScore = function(score, totalScore) {
         return `You got an ${lettergrade} (${percent}%)!`
 }
 
-let grade = totalPossibleScore(80, 100)
+const grade = totalPossibleScore(80, 100)
 console.log(grade)
