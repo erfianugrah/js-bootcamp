@@ -6,4 +6,10 @@ const todo = [
     'drink'
 ]
 
-console.log(`Todo: ${todo[0]} and ${todo[4]}`)
+// Delete the third item
+// Add a new item onto the end
+// Remove the first item
+todo.splice(2,1)
+todo.push('sex')
+todo.unshift('sex again')
+console.log(todo)
