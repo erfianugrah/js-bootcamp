@@ -19,3 +19,10 @@ todo.unshift('sex again')
 todo.forEach(function (item, index) {
     console.log(`${index + 1}. ${item}`)
 })
+
+for (let i = 0; i <= todo.length; i++) {
+    const num = i + 1
+    const todos = todo[i]
+    console.log(`${num}. ${todos}`)
+
+}
