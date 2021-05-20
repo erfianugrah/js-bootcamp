@@ -12,4 +12,10 @@ const todo = [
 todo.splice(2,1)
 todo.push('sex')
 todo.unshift('sex again')
-console.log(todo)
+
+// 1. The first item
+// 2. The second item
+
+todo.forEach(function (item, index) {
+    console.log(`${index + 1}. ${item}`)
+})
