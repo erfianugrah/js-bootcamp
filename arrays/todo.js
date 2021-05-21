@@ -14,12 +14,12 @@ const todo = [
 // 1. Convert to array of objects with two properties -> text, completed
 // 2. Create functione to remove a todo by text value
 const deleteTodo = function (todo, thing) {
-    
     const index = todo.findIndex(function (todos, index) {
         return todos.thing.toLowerCase() === thing.toLowerCase()
     })
-    if (index > -1)
-    {todo.splice(index, 1)}
+    if (index > -1){
+        todo.splice(index, 1)
+    }
 }
 
 deleteTodo(todo, 'Code')
