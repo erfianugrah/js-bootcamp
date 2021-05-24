@@ -12,7 +12,7 @@ const todo = [
 ]
 
 // 1. Convert to array of objects with two properties -> text, completed
-// 2. Create functione to remove a todo by text value
+// 2. Create function to remove a todo by text value
 const deleteTodo = function (todo, thing) {
     const index = todo.findIndex(function (todos, index) {
         return todos.thing.toLowerCase() === thing.toLowerCase()
@@ -21,6 +21,14 @@ const deleteTodo = function (todo, thing) {
         todo.splice(index, 1)
     }
 }
+const getThingsTodo = function (todos, query) {
+    return todos.filter(function (todo, index) {
+    return !todo.completed
+    
+    })
+    
+}
+console.log(getThingsTodo(todo))
 
 deleteTodo(todo, 'Code')
 console.log(todo)
