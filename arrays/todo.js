@@ -11,6 +11,18 @@ const todo = [
     }
 ]
 
+const sortTodos = function (todo) {
+    todo.sort(function (a, b) {
+        if (!a.completed && b.completed) {
+            return - 1
+        } else if (!b.completed && a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
 // 1. Convert to array of objects with two properties -> text, completed
 // 2. Create function to remove a todo by text value
 const deleteTodo = function (todo, thing) {
@@ -31,6 +43,9 @@ const getThingsTodo = function (todos, query) {
 console.log(getThingsTodo(todo))
 
 deleteTodo(todo, 'Code')
+console.log(todo)
+
+sortTodos(todo)
 console.log(todo)
 
 
