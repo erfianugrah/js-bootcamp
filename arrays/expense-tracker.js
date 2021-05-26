@@ -28,7 +28,7 @@ const account = {
 
     accountBalance = totalIncome - totalExpenses
 
-    return `Account for ${this.name} has a balance of $${accountBalance}. $${totalExpenses} in expenses.`
+    return `Account for ${this.name} has a balance of $${accountBalance}. $${totalIncome} in income. $${totalExpenses} in expenses.`
     },
 }
 
