@@ -16,7 +16,7 @@ const incompleteTodos = todos.filter(function (todo) {
 })
 
 const summary = document.createElement('h2')
-summary.textContent = `You have ${incompleteTodos} todeos left`
+summary.textContent = `You have ${incompleteTodos.length} todos left`
 document.querySelector('body').appendChild(summary)
 
 todos.forEach(function (todo) {
@@ -25,5 +25,13 @@ todos.forEach(function (todo) {
     document.querySelector('body').appendChild(p)
 })
 
+
 // Print Summmary - you have 2 todos left (p element)
 // Add a p for each to do above (use text value)
+
+// Listen for new todo creation
+
+document.querySelector('button').addEventListener('click', function (e) {
+    console.log('Did this work?')
+    console.log(e)
+})

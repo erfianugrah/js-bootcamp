@@ -15,16 +15,21 @@ const notes = [
     }
 ]
 
-// Query all and remove
-const ps =  document.querySelectorAll('p')
-
-ps.forEach(function (p) {
-    p.textContent = '******'
-    // console.log(p.textContent)
-    // p.remove()
+document.querySelector('button').addEventListener('click', function (e) {
+    console.log('Did this work?')
+    console.log(e)
 })
 
-// Add a new element
-const newParagraph = document.createElement('p')
-newParagraph.textContent = 'This is a new element from JavaScript'
-document.querySelector('body').appendChild(newParagraph)
+ // Query all and remove
+// const ps =  document.querySelectorAll('p')
+
+// ps.forEach(function (p) {
+//     p.textContent = '******'
+     // console.log(p.textContent)
+     // p.remove()
+// })
+
+ // Add a new element
+// const newParagraph = document.createElement('p')
+// newParagraph.textContent = 'This is a new element from JavaScript'
+// document.querySelector('body').appendChild(newParagraph)
