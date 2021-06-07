@@ -16,8 +16,11 @@ const notes = [
 ]
 
 document.querySelector('button').addEventListener('click', function (e) {
-    console.log('Did this work?')
-    console.log(e)
+    e.target.textContenn = 'The button was clicked'
+})
+
+document.querySelectorAll('button')[1].addEventListener('click', function () {
+    console.log('Delete All Notes')
 })
 
  // Query all and remove
