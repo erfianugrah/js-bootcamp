@@ -35,18 +35,19 @@ const renderTodos = function (todo, thing) {
     })
 }
 
-renderTodos(todo, filters)
-
-document.querySelector('#add-todo').addEventListener('click', function (e) {
-    console.log('Did this work?')
-    console.log(e)
-})
-
-document.querySelector('#new-todo').addEventListener('input', function (e) {
-    console.log(e.target.value)
-})
+renderTodos(todos, filters)
 
 document.querySelector('#search-text').addEventListener('input', function (e) {
     filters.searchText = e.target.value
     renderTodos(todo, filters)
+})
+
+document.querySelector('#new-todo').addEventListener('submit', function (e) {
+    e.preventDefault()
+    todo.push({
+        thing: e.target.elements.thing.value,
+        completed:false
+    })
+    renderTodos(todos, filters)
+    e.target.elements.thing.value = ''
 })
