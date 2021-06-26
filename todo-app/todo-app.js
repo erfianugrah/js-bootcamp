@@ -17,18 +17,20 @@ const filters = {
 }
 
 const renderTodos = function (todo, thing) {
-        let filteredTodos = todo.filter( function (todo) {
-        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+        const filteredTodos = todo.filter( function (todo) {
+            const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+            const hideCompletedmatch = !filters.hideCompleted || !todo.completed     
+            return searchTextMatch && hideCompletedmatch
     })
 
-    filteredTodos = filteredTodos.filter(function (todo) {
-        return !filters.hideCompleted || !todo.completed
+    // filteredTodos = filteredTodos.filter(function (todo) {
+    //     return !filters.hideCompleted || !todo.completed
          // if (filters.hideCompleted) {
         //     return !todo.completed
         // } else {
         //     return true
         // }
-    })
+    // })
 
         const incompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
