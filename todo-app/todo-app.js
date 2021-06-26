@@ -22,11 +22,12 @@ const renderTodos = function (todo, thing) {
     })
 
     filteredTodos = filteredTodos.filter(function (todo) {
-        if (filters.hideCompleted) {
-            return !todo.completed
-        } else {
-            return true
-        }
+        return !filters.hideCompleted || !todo.completed
+         // if (filters.hideCompleted) {
+        //     return !todo.completed
+        // } else {
+        //     return true
+        // }
     })
 
         const incompleteTodos = filteredTodos.filter(function (todo) {
