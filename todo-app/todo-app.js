@@ -27,7 +27,7 @@ const renderTodos = function (todo, thing) {
     //     return !filters.hideCompleted || !todo.completed
          // if (filters.hideCompleted) {
         //     return !todo.completed
-        // } else {
+        // } else {@
         //     return true
         // }
     // })
