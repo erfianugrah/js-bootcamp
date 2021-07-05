@@ -1,19 +1,13 @@
-const todos = [
-    {
-        thing: 'gym',
-        completed: false
-    }, {
-        thing: 'code',
-        completed: true
-    }, {
-        thing: 'sleep',
-        completed: false
-    }
-]
+let todos = []
 
 const filters = {
     searchText: '',
     hideCompleted: false
+}
+
+const todosJSON = localStorage.getItem('todos')
+if (todosJSON !== null) {
+    todos = JSON.parse(todosJSON)
 }
 
 const renderTodos = function (todo, thing) {
@@ -22,15 +16,6 @@ const renderTodos = function (todo, thing) {
             const hideCompletedmatch = !filters.hideCompleted || !todo.completed     
             return searchTextMatch && hideCompletedmatch
     })
-
-    // filteredTodos = filteredTodos.filter(function (todo) {
-    //     return !filters.hideCompleted || !todo.completed
-         // if (filters.hideCompleted) {
-        //     return !todo.completed
-        // } else {@
-        //     return true
-        // }
-    // })
 
         const incompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
@@ -61,6 +46,7 @@ document.querySelector('#new-todo').addEventListener('submit', function (e) {
         thing: e.target.elements.thing.value,
         completed:false
     })
+    localStorage.setItem('todos', JSON.stringify(todos))
     renderTodos(todos, filters)
     e.target.elements.thing.value = ''
 })
